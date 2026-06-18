@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -63,6 +64,10 @@ body {
 .navbar__s3 i {
     cursor: pointer;
 }
+.navbar__s4{
+    display: none;
+    cursor: pointer;
+}
 
 /*-----my learning popup---*/
 .Mylearning {
@@ -81,7 +86,7 @@ body {
     display: none;
 }
 
-.container {
+.catagories {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
@@ -95,7 +100,7 @@ body {
 
 }
 
-.container p {
+.catagories p {
     color: white;
     background-color: darkblue;
     border-radius: 30px;
@@ -103,7 +108,7 @@ body {
     cursor: pointer;
       border: solid black 1px;
 }
-.container p:hover{
+.catagories p:hover{
     transition: 1s;
     background-color: transparent;
     color: black;
@@ -163,7 +168,9 @@ body {
 }
 
 .course-card {
-    width: 300px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .course-card img {
@@ -225,6 +232,7 @@ body {
 
 .footer__one {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 
 }
@@ -234,5 +242,28 @@ body {
     justify-content: space-between;
     display: flex;
     cursor: pointer;
+     flex-wrap: wrap;
 
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .course-card {
+        flex-basis: 40%;
+    }
+
+    .catagories {
+        display: none;
+    }
+    .navbar__s2,.navbar__s3{
+        display: none;
+    }
+    .navbar__s4{
+        display: block;
+    }
 }
