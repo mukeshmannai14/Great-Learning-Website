@@ -22,7 +22,7 @@ body {
 }
 
 .navbar__s1__title {
-    color:darkblue;
+    color: darkblue;
     cursor: pointer;
 }
 
@@ -55,19 +55,22 @@ body {
     gap: 10px;
     align-items: center;
 }
-.navbar__s3 p{
+
+.navbar__s3 p {
     cursor: pointer;
 }
-.navbar__s3 i{
+
+.navbar__s3 i {
     cursor: pointer;
 }
 
 /*-----my learning popup---*/
-.Mylearning{
+.Mylearning {
     position: relative;
     cursor: pointer;
 }
-.mylearning__popup{
+
+.mylearning__popup {
     position: absolute;
     background-color: #fff;
     border: solid black 1px;
@@ -77,15 +80,17 @@ body {
     padding: 20px;
     display: none;
 }
+
 .container {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
     border-bottom: solid black 1px;
     justify-content: space-between;
-    
+
 }
-.Mylearning:hover .mylearning__popup{
+
+.Mylearning:hover .mylearning__popup {
     display: block;
 
 }
@@ -96,24 +101,51 @@ body {
     border-radius: 30px;
     padding: 15px;
     cursor: pointer;
+      border: solid black 1px;
+}
+.container p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid black 1px;
 }
 
-.sale-image{
+.sale-image {
     position: relative;
 }
+
 .sale-image img {
     width: 100%;
     object-fit: cover;
 
 }
-.sale-image__offer{
+
+.sale-image__offer {
     border: solid black 2px;
     padding: 2%;
     width: 35%;
     background-color: #fff;
     position: absolute;
     top: 10%;
-    left: 5%;
+    left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+   opacity: 0;
+   animation-fill-mode: forwards;
+
+
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 
 }
 
@@ -127,7 +159,7 @@ body {
     gap: 20px;
     justify-content: center;
     margin-top: 10px;
-    
+
 }
 
 .course-card {
@@ -139,6 +171,7 @@ body {
     height: 180px;
     object-fit: cover;
 }
+
 .topics__container {
     display: flex;
     flex-wrap: wrap;
@@ -160,7 +193,7 @@ body {
 
 .popular {
     padding: 10px;
-   
+
 
 
 }
@@ -183,8 +216,6 @@ body {
     padding: 30px;
     margin-top: 10px;
 
-
-
 }
 
 .footer__one p {
@@ -195,13 +226,13 @@ body {
 .footer__one {
     display: flex;
     gap: 10px;
- 
+
 }
 
 
-.footer__two{
+.footer__two {
     justify-content: space-between;
     display: flex;
     cursor: pointer;
-   
+
 }
